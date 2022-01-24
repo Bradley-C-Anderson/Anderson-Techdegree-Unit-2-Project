@@ -148,10 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    }
 
-// Call functions
-//load the first page when page is opened
-let currPageNum = 1;
-   showPage(currPageNum);
-   addPagination();
+   // Call functions
+   //load the first page when page is opened
+   let currPageNum = 1;
+      showPage(currPageNum);
+      addPagination();
 
 });//end of DOMContentLoaded handler
