@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     * @param {className} the class name of the HTML element to remove.
     * @return void
    */
-   //function removeElementsByClass found on Stack Overflow by Miguel Mota
-   //https://stackoverflow.com/questions/34193751/js-remove-last-child
 
    function removeElementsByClass(className){
       const elements = document.getElementsByClassName(className);
