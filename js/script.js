@@ -10,18 +10,43 @@ For assistance:
    Check out the "Project Resources" section of the Instructions tab: https://teamtreehouse.com/projects/data-pagination-and-filtering#instructions
    Reach out in your Slack community: https://treehouse-fsjs-102.slack.com/app_redirect?channel=unit-2
 */
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
    const ul = document.querySelector('.student-list');
+   //number for the total number of students
    const endNumStudent = data.length;
+   //starting number for student page output
    let startNumStudent = 0;
+   //how many students do you want per page
    const numPerPage = 9;
+   //mnumber of pages gets pushed up so all students will be displayed
    const numPages = Math.ceil(endNumStudent/numPerPage);
 
+   /**
+    * Creates an HTML element
+    *
+    * @param {elementName} the HTML element are you creating
+    * @param {property} property to assign a value
+    * @param {value} value to assign the property
+    * @return {number} the created HTML element
+   */
    function createElement(elementName, property, value){
       const element = document.createElement(elementName);
       element[property] = value;
       return element;
    }
+
+   /**
+    * Removes an element
+    *
+    * function removeElementsByClass found on Stack Overflow by Miguel Mota
+    * https://stackoverflow.com/questions/34193751/js-remove-last-child
+    * 
+    * @param {className} the class name of the HTML element to remove.
+    * @return void
+   */
    //function removeElementsByClass found on Stack Overflow by Miguel Mota
    //https://stackoverflow.com/questions/34193751/js-remove-last-child
 
@@ -33,11 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
    
    
-/*
-Create the `showPage` function
-This function will create and insert/append the elements needed to display a "page" of nine students
-*/
-
+   /*
+   Create the `showPage` function
+   This function will create and insert/append the elements needed to display a "page" of nine students
+   */
+   /**
+    * Shows a page of students
+    *
+    * 
+    * @param {pageNum} which page of students would you like to show
+    * @return void
+   */
    
    function showPage(pageNum){
       let currNumPerPage = numPerPage;
@@ -81,7 +112,13 @@ This function will create and insert/append the elements needed to display a "pa
    Create the `addPagination` function
    This function will create and insert/append the elements needed for the pagination buttons
    */
-   //create page buttons
+   /**
+    * Adds the number of pages needed on a page.
+    *
+    * 
+    * @param none
+    * @return void
+   */
    function addPagination(){
       const ulPage = document.querySelector('.link-list');
       
